@@ -1,0 +1,49 @@
+.borderSection{
+  width: 100%;
+  border: 2px solid black;
+}
+
+div{
+  padding-left: 5px;
+}
+
+/*#sizeSection{
+  display: none;
+}
+
+#orderButton{
+  display: none;
+}
+
+#additionalToppings{
+  display: none;
+}
+
+#buildPizzaSection{
+  display: none;
+}
+
+#toppingsSection{
+  display: none;
+}
+
+#outputSection{
+  display: none;
+}*/
+
+.form-control{
+  width: 70%;
+}
+
+.price{
+  text-align: right;
+  padding-right: 40px;
+}
+
+.well{
+  width: 50%;
+}
+
+p #receiptSection{
+  font-size: 18px;
+}

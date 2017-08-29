@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Portland Plant Pizza Company</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Portland Plant Pizza Company</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="borderSection">
+            <h2>Menu </h2>
+            <hr>
+            <h3><u>The Kenton</u></h3>
+              <p>Pesto, housemade cashew mozz, sun-dried tomatoes, purple kale, carmelized onions, pine nuts</p>
+              <p class="price">$16</p>
+            <h3><u>The Goose Hollow</u></h3>
+              <p>Puree carmelized onion sauce, spicy buffalo style cauliflower, fried onions, red peppers</p>
+              <p class="price">$15</p>
+            <h3><u>The Pearl</u></h3>
+              <p>Curried tempeh, red and yellow peppers, red sauce, grated fresh tumeric and ginger root, roasted garlic </p>
+              <p class="price">$14</p>
+            <h3><u>The Downtown</u></h3>
+              <p>,Red sauce, housemade cashew mozz, fresh basil, thin sliced heirloom tomatoes, extra virgin olive oil</p>
+              <p class="price">$14</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="borderSection">
+            <form id="orderForm">
+              <div class="form-group">
+                <label for="selectPizza">Select pizza</label>
+                <select class="form-control" id="selectPizza">
+                  <option>The Kenton</option>
+                  <option>The Goose Hollow</option>
+                  <option>The Pearl</option>
+                  <option>The Downtown</option>
+                  <option>Build a peetz</option>
+                </select>
+                <div id="sizeSection">
+                  <hr>
+                  <label for="selectPizzaSize">Select pizza size: </label>
+                  <select class="form-control" id="selectPizzaSize">
+                    <option>Small (13 inch pie)</option>
+                    <option>Medium (15 inch pie + $6)</option>
+                    <option>Large (18 inch pie + $11)</option>
+                  </select>
+                </div>
+                <div id="toppingsSection">
+                  <hr>
+                  <input type="checkbox" name="top" id="tomatoes" value="Fresh Tomatoes">Fresh Tomatoes<br>
+                  <input type="checkbox" name="top" id="sundried" value="Sundried Tomatoes">Sundried Tomatoes<br>
+                  <input type="checkbox" name="top" id="onions" value="Yellow onions">Yellow onions<br>
+                  <input type="checkbox" name="top" id="tempeh" value="Tempeh">Tempeh<br>
+                  <input type="checkbox" name="top" id="peppers" value="Red and yellow peppers">Red and yellow peppers<br>
+                  <input type="checkbox" name="top" id="jalapenos" value="Jalapenos">Jalapenos<br>
+                  <input type="checkbox" name="top" id="basil" value="Basil">Basil<br>
+                  <input type="checkbox" name="top" id="garlic" value="Roasted Garlic">Roasted Garlic<br>
+                  <input type="checkbox" name="top" id="tofu" value="Tofu riccotta">Tofu riccotta<br>
+                </div>
+              </div>
+               <button id="orderButton" type="submit" class="btn btn-success">Place order</button>
+            </form>
+          </div>
+        </div>
+        <div id="outputSection" class="col-md-5">
+          <div class="well">
+            <h3>Total: </h3>
+            <h3><span id="priceSection"></span></h3>
+            <div id="receiptSection">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
