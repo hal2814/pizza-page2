@@ -1,59 +1,74 @@
 //back end
 
-function pizza(pizzaType,pizzaSize,cheese,sauce,price){
-  this.pizzaType = pizzaType;
-  this.pizzaSize = pizzaSize;
+//pizza object
+function pizza(){
+  this.pizzaType;
+  this.pizzaSize;
   this.toppings = [];
-  this.cheese = cheese;
-  this.sauce = sauce;
-  this.price = price;
+  this.price = 0;
 };
 
-pizza.prototype.getType = function (type,price) {
+pizza.prototype.total = function (finalTotal) {
+  this.price = finalTotal;
+  return this.price;
+};
+
+pizza.prototype.getType = function (type) {
+  if(type==="The Kenton"){
+    this.price += 16;
+  }
+  if(type==="The Goose Hollow"){
+    this.price += 15;
+  }
+  if(type==="The Pearl"){
+    this.price += 14;
+  }
+  if(type==="The Downtown"){
+    this.price += 14;
+  }
   this.pizzaType = type;
-  this.price += price;
 };
 
-pizza.prototype.getSize = function (size,price) {
+pizza.prototype.getSize = function (size) {
   if(size==="Small (13 inch pie)"){
-
+    this.price += 0;
   }
   if(size==="Medium (15 inch pie + $6)"){
-
+    this.price += 6;
   }
   if(size==="Large (18 inch pie + $11)"){
-
+    this.price += 11;
   }
   this.pizzaSize = size;
-  this.price += price;
 };
 
-pizza.prototype.getToppings = function (toppers,price) {
-  for(var i=0;i<toppers.length;++i){
-    this.toppings.push(toppers[i]);
-  };
-  this.price += (toppers.length *2);
+pizza.prototype.getTopping = function (toppin) {
+  this.toppings.push(toppin);
+  this.price += 2;
 };
-
-function pizzaChoice(pizzaType,pizzaObject){
-  if(pizzaType==="The Kenton"){
-    pizzaObject.getType(pizzaType,16);
-  }
-  if(pizzaType==="The Goose Hollow"){
-    pizzaObject.getType(pizzaType,15);
-  }
-  if(pizzaType==="The Pearl"){
-    pizzaObject.getType(pizzaType,14);
-  }
-  if(pizzaType==="The Downtown"){
-    pizzaObject.getType(pizzaType,14);
-  }
-};
-
-
 
 //back end
 
 $(document).ready(function(){
-
+  var pizzaOrdered = new pizza();
+  $("#addButton").click(function(event) {
+    var topping = $("#selectTopping").val();
+    pizzaOrdered.getTopping(topping);
+  });
+  $("form#orderForm").submit(function(event) {
+    event.preventDefault();
+    //type
+    var pizzaBase = $("#selectPizza").val();
+    pizzaOrdered.getType(pizzaBase);
+    //size
+    var SizeOfPizza = $("#selectPizzaSize").val();
+    pizzaOrdered.getSize(SizeOfPizza);
+    //toppings
+    $("#titleSection").text("You Ordered: ")
+    $("#orderSizeSection").text(pizzaOrdered.pizzaSize);
+    $("#orderTypeSection").text(pizzaOrdered.pizzaType);
+    $("#orderToppingSection").text(pizzaOrdered.toppings);
+    $("#receiptSection").text(pizzaOrdered.price);
+    pizzaOrdered = new pizza();
+  });
 });

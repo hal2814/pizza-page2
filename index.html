@@ -52,15 +52,19 @@
                 </div>
                 <div id="toppingsSection">
                   <hr>
-                  <input type="checkbox" name="top" id="tomatoes" value="Fresh Tomatoes">Fresh Tomatoes<br>
-                  <input type="checkbox" name="top" id="sundried" value="Sundried Tomatoes">Sundried Tomatoes<br>
-                  <input type="checkbox" name="top" id="onions" value="Yellow onions">Yellow onions<br>
-                  <input type="checkbox" name="top" id="tempeh" value="Tempeh">Tempeh<br>
-                  <input type="checkbox" name="top" id="peppers" value="Red and yellow peppers">Red and yellow peppers<br>
-                  <input type="checkbox" name="top" id="jalapenos" value="Jalapenos">Jalapenos<br>
-                  <input type="checkbox" name="top" id="basil" value="Basil">Basil<br>
-                  <input type="checkbox" name="top" id="garlic" value="Roasted Garlic">Roasted Garlic<br>
-                  <input type="checkbox" name="top" id="tofu" value="Tofu riccotta">Tofu riccotta<br>
+                  <label for="selectTopping">Select Toppings: </label>
+                  <select class="form-control" id="selectTopping">
+                    <option>Fresh Tomatoes</option>
+                    <option>Sundried Tomatoes</option>
+                    <option>Yellow onions</option>
+                    <option>Tempeh</option>
+                    <option>Red and yellow peppers</option>
+                    <option>Jalapenos</option>
+                    <option>Basil</option>
+                    <option>Roasted Garlic</option>
+                    <option>Tofu riccotta</option>
+                  </select>
+                  <button type="button" class="btn btn-info" id="addButton">Add topping</button>
                 </div>
               </div>
                <button id="orderButton" type="submit" class="btn btn-success">Place order</button>
@@ -69,9 +73,12 @@
         </div>
         <div id="outputSection" class="col-md-5">
           <div class="well">
-            <h3>Total: </h3>
-            <h3><span id="priceSection"></span></h3>
-            <div id="receiptSection">
+            <h3><span id="titleSection"></span></h3>
+            <div >
+              <p><span id="orderSizeSection"></span></p>
+              <p><span id="orderTypeSection"></span></p>
+              <p>Toppings: <span id="orderToppingSection"></span></p>
+              <p>$<span id="receiptSection"></span>.00</p>
             </div>
           </div>
         </div>
