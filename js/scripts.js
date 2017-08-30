@@ -6,12 +6,12 @@ function pizza(){
   this.pizzaSize;
   this.toppings = [];
   this.price = 0;
-};
+}
 
 pizza.prototype.total = function (finalTotal) {
   this.price = finalTotal;
   return this.price;
-};
+}
 
 pizza.prototype.getType = function (type) {
   if(type==="The Kenton"){
@@ -27,7 +27,7 @@ pizza.prototype.getType = function (type) {
     this.price += 14;
   }
   this.pizzaType = type;
-};
+}
 
 pizza.prototype.getSize = function (size) {
   if(size==="Small (13 inch pie)"){
@@ -40,12 +40,12 @@ pizza.prototype.getSize = function (size) {
     this.price += 11;
   }
   this.pizzaSize = size;
-};
+}
 
 pizza.prototype.getTopping = function (toppin) {
   this.toppings.push(toppin);
   this.price += 2;
-};
+}
 
 //back end
 $(document).ready(function(){
