@@ -12,6 +12,6 @@ This program will simulate a pizza order website. It will allow the user to inpu
 | Calculate price based on toppings                             | "tomatoes, tempeh" | "4"                                                                                              |
 | Display a receipt                                  | "The Kenton, Medium (15 inch pie +$6), tomatoes, tempeh" | "Medium (15 inch pie +$6),The Kenton, tomatoes, tempeh, $26" |
 
-Github page: https://hal2814.github.io/Pizza-company/
+Github page: https://hal2814.github.io/pizza-page2/
 
 copyright Nate McGregor 2017 Epicodus
