@@ -48,7 +48,6 @@ pizza.prototype.getTopping = function (toppin) {
 };
 
 //back end
-
 $(document).ready(function(){
   var pizzaOrdered = new pizza();
   $("#addButton").click(function(event) {
